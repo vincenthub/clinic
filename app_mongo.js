@@ -7,6 +7,7 @@ const app = express();
 const authRoute = require('./lib/routes/auth');
 const userRoute = require('./lib/routes/user');
 const clinicRoute = require('./lib/routes/clinic');
+const staffRoute = require('./lib/routes/staff')
 
 //middleware
 app.use(express.json());
@@ -20,6 +21,7 @@ app.use(cors());
 // })
 app.use('/api/v1/auth', authRoute);
 app.use('/api/v1/user', userRoute);
+app.use('/api/v1/staff', staffRoute);
 app.use('/api/v1/clinic', clinicRoute);
 
 module.exports = app;
